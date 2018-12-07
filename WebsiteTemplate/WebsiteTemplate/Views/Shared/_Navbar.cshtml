@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+
+</head>
+<body>
+
+    @* Navbar*@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand d-flex flex-fill" asp-controller="Home" asp-action="Index">Website Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav ml-auto justify-content-end d-flex flex-fill">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Projects" asp-action="Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    @* Main page content*@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+
+    @* Footer*@
+    <footer class="fixed-bottom align-content-between align-content-center" id="footer">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark text-light row pl-2">
+            <div class="d-inline-flex container col-6 justify-content-start">
+                <p class="txt-18">&copy; 2018 - @DateTime.Today.Year</p>
+            </div>
+            <div class="d-inline-flex container col-6 ml-auto justify-content-end pr-2">
+                <ul class="">
+                    <li class="list-inline-item">Logo1</li>
+                    <li class="list-inline-item">Logo2</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
