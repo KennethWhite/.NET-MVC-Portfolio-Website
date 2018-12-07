@@ -1,2 +1,2 @@
-# .NET-MVC-Portfolio-Website
-An in-progress project to create a personal portfolio website using ASP.NET MVC 2
+# .net-mvc-website
+An in progress project to create a template for a personal .Net Core MVC Website.
